@@ -1,0 +1,167 @@
+<div class=" body-content">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb nopadding">
+            <li class="breadcrumb-item"><a class="menus"> Home</a></li>
+            <li class="breadcrumb-item"><a routerLinkActive routerLink='project' class="menus menusactive">Project</a>
+            </li>
+            <li class="breadcrumb-item"><a></a></li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+
+    <section class="project-list">
+      <div class="row mt-3">
+        <div class="col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+          <label class="head">Projects List</label> &nbsp; &nbsp;
+          <a class="button mt-5" style="margin: -6px auto;     font-size: 14px;" (click)="newproject()">Create New
+            Project</a>
+        </div>
+        <div class="col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 text-right">
+          <!-- <label class="sort">Sort</label>
+          <select class="form-control-select" (change)="selectvalues($event.target.value)">
+            <option class="select" value="null">ALL PROJECT TYPE</option>
+            <option class="select" value="1">LEGISLATION</option>
+            <option class="select" value="2">EXPORT</option>
+            <option class="select" value="3">DOMESTIC</option>
+          </select> &nbsp; &nbsp;
+          <select class="form-control-select">
+            <option class="select" disabled value="null">PLATFORM</option>
+            <option class="select" value="select1">PLATFORM 1</option>
+            <option class="select" value="select2">PLATFORM 2</option>
+            <option class="select" value="select3">PLATFORM 3</option>
+          </select> -->
+        </div>
+      </div>
+    </section>
+
+
+    <section class="project-bg">
+      <div id="accordion">
+        <div class="card">
+          <a class="card-header card-link" data-toggle="collapse" href="#collapseOne">
+              Legislation
+            </a>
+          <div id="collapseOne" class="collapse show" data-parent="#accordion">
+            <div class="card-body">
+              <div class="row">
+                <ng-container *ngFor="let data of filterValues; let i=index;">
+                  <div class="col-12 col-sm-6 col-md-6 col-lg-3 col-xl-3">
+                    <div class="card" id="legi1" (click)="ganttpage()">
+                      <div class="row mb-5">
+                        <div class="col-6">
+                          <span class="card-text mb-5"></span>
+                        </div>
+                        <div class="col-6 text-right">
+                          <span class="card-text">{{data.value2}}</span>
+                        </div>
+                      </div>
+                      <h4 class="mt-5">{{data.value3}}</h4>
+                      <div class="card-content ">
+                        <div class=" row rowcard">
+                          <div class="col-6" style="padding-left: 9px;">
+                            <div class="inside-content">
+                              <span>{{data.value4}}</span>
+                              <p>{{data.value5}}</p>
+                            </div>
+                          </div>
+                          <div class="col-6">
+                            <span>{{data.value6}}</span>
+                            <h6>{{data.value7}}</h6>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </ng-container>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <a class="card-header collapsed card-link" data-toggle="collapse" href="#collapseTwo">
+              Export
+            </a>
+          <div id="collapseTwo" class="collapse" data-parent="#accordion">
+            <div class="card-body">
+              <div class="row">
+                <ng-container *ngFor="let data of filterValues; let i=index;">
+                  <div class="col-12 col-sm-6 col-md-6 col-lg-3 col-xl-3">
+                    <div class="card" id="legi1" (click)="ganttpage()">
+                      <div class="row mb-5">
+                        <div class="col-6">
+                          <span class="card-text mb-5"></span>
+                        </div>
+                        <div class="col-6 text-right">
+                          <span class="card-text">{{data.value2}}</span>
+                        </div>
+                      </div>
+                      <h4 class="mt-5">{{data.value3}}</h4>
+                      <div class="card-content ">
+                        <div class=" row rowcard">
+                          <div class="col-6" style="padding-left: 9px;">
+                            <div class="inside-content">
+                              <span>{{data.value4}}</span>
+                              <p>{{data.value5}}</p>
+                            </div>
+                          </div>
+                          <div class="col-6">
+                            <span>{{data.value6}}</span>
+                            <h6>{{data.value7}}</h6>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </ng-container>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <a class="card-header collapsed card-link" data-toggle="collapse" href="#collapseThree">
+              Domestic
+            </a>
+          <div id="collapseThree" class="collapse" data-parent="#accordion">
+            <div class="card-body">
+              <div class="row">
+                <ng-container *ngFor="let data of filterValues; let i=index;">
+                  <div class="col-12 col-sm-6 col-md-6 col-lg-3 col-xl-3">
+                    <div class="card" id="legi1" (click)="ganttpage()">
+                      <div class="row mb-5">
+                        <div class="col-6">
+                          <span class="card-text mb-5"></span>
+                        </div>
+                        <div class="col-6 text-right">
+                          <span class="card-text">{{data.value2}}</span>
+                        </div>
+                      </div>
+                      <h4 class="mt-5">{{data.value3}}</h4>
+                      <div class="card-content ">
+                        <div class=" row rowcard">
+                          <div class="col-6" style="padding-left: 9px;">
+                            <div class="inside-content">
+                              <span>{{data.value4}}</span>
+                              <p>{{data.value5}}</p>
+                            </div>
+                          </div>
+                          <div class="col-6">
+                            <span>{{data.value6}}</span>
+                            <h6>{{data.value7}}</h6>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </ng-container>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>

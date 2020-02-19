@@ -1,0 +1,143 @@
+table#myTable1part1 td, table#myTable1part2 td {
+    height: 30px !important;
+    vertical-align: middle !important;
+    font-size: 11px !important;;
+    font-weight: bold !important;
+    margin: 0px !important;
+    padding: 0px 0px !important;
+    text-align: center;
+}
+table#myTable1part1 th, table#myTable1part2 th {
+    height: 32px !important;
+    vertical-align: middle !important;
+    font-size: 11px !important;
+    font-weight: bold !important;
+    margin: 0px !important;
+    padding: 0px 5px !important;
+    text-align: center;
+    text-transform: uppercase;
+}
+.col-md-9,.col-md-3{
+    padding:0px !important;
+    margin: 0 -1px !important;
+}
+input.form-control {
+    height: 25px !important;
+    width: 100% !important; 
+    font-size: 11px !important;
+    padding: 5px !important;
+    text-align: center;
+}
+
+   .displaynonetd{
+        visibility: hidden ;
+        border: none;
+    }
+   .table#myTable1part2 td {
+        border-left: none !important;
+        border-right: 0px;
+    }
+    .table#myTable1part2 td:last-child{
+        border-right: 1px solid #ddd;
+    }
+  
+ 
+
+  #add .form-control{
+      text-align: left !important;
+  }
+  .btm-back:hover{
+      color:#fff;
+  }
+  th.start{
+    background: #C9C9C9;
+    color:#000;
+}        
+th.end{
+    background: #b3c0ce;
+    color:#000;
+} 
+td.start-td{
+    background: #e4e4e4;
+} 
+td.end-td{
+    background: #b3c0ce;
+}
+input.form-control{
+    background: #fff;
+}
+
+.chart-table1{
+    background: #FFFFFF;
+box-shadow: 5px 0 11px -5px rgba(156,156,156,0.50);
+}
+.chart-table1 h4{
+    margin:0px;
+    text-align: center;
+    color: #161616;
+    font-family: montserrat;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 8px 0 8px 0px;
+
+}
+.hdtbs-heads {
+    color: #161616;
+    font-family: montserrat;
+    font-weight: bold;
+    font-size: 20px;
+}
+a.menus{
+    cursor: pointer;
+}
+.legents{
+    list-style: none;
+    display: inline-flex;
+    float: right;
+}
+.plan-cell {
+    background: #000 !important;
+    height: 9px;
+    padding: 0px;
+    width: 100%;
+    margin: 0px;
+}
+.plan-cell-blue {
+    background: #4A90E2 !important;
+    height: 9px;
+    padding: 0px;
+    width: 100%;
+    margin: 0px;
+}
+.img1{
+    position: relative;
+    bottom: 6px;
+
+}
+.img2{
+    position: relative;
+    bottom: 6px;
+
+}
+.img3{
+    position: relative;
+    bottom: 6px;
+
+}
+.img4{
+    position: relative;
+    bottom: 6px;
+
+} 
+.img5{
+    position: relative;
+    bottom: 6px;
+
+}
+.q-value {
+    background: #FFFFFF;
+    border: 1px solid #000000;
+    border-radius: 6px;
+    position: relative;
+    top: -12px;
+}

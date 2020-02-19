@@ -1,0 +1,114 @@
+body{
+  background: #F9F9FC !important;
+  padding: 0px !important;
+}
+.nopadding{
+  padding:0px !important;
+}
+.text-center{
+  text-align: center !important;
+}
+.text-right{
+  text-align: right !important;
+}
+.text-left{
+  text-align: left !important;
+}
+
+.pull-right{
+  float: right;
+}
+
+.pointer{
+  cursor: pointer !important;
+}
+.textcenter{
+  text-align: center !important;
+}
+.body-content{
+  padding: 80px 0 0 250px;
+  height: 100vh;
+}
+li.breadcrumb-item a{
+  color:#86848C;
+  font-size: 13px;
+
+}
+.btn-primary{
+  font-family: montserrat !important;
+  background: #00398C !important;
+}
+.btn-primary:hover{
+box-shadow: 0 0 2px 1px #00398c !important;
+}
+@media screen and (max-width: 700px) {
+
+  .body-content{
+    padding: 80px 0 0 0px;
+  }
+
+}
+.menusactive{
+  font-weight: bold;
+  color: #007bff !important;
+}
+
+
+/*----------------switch-field start------------*/
+
+.switch-field {
+  overflow: hidden;
+}
+
+.switch-title {
+margin-bottom: 6px;
+}
+
+.switch-field input {
+  position: absolute !important;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  width: 1px;
+  border: 0;
+  overflow: hidden;
+}
+
+.switch-field label {
+float: left;
+}
+
+.switch-field label {
+  width: 100px;
+  color: #0e0e0e;
+  font-size: 12px;
+  font-weight: bold;
+  text-align: center;
+  text-shadow: none;
+  padding: 5px 4px;
+  transition: all 0.1s ease-in-out;
+  background: #FFFFFF;
+  border: 1px solid #979797;
+}
+
+.switch-field label:hover {
+  cursor: pointer;
+}
+
+.switch-field input:checked + .approve {
+  background-color: #000;
+  color:#fff;
+}
+.switch-field input:checked + .reject {
+background-color: #000;
+color:#fff;
+}
+.switch-field input:checked + .monitor {
+  background-color: #000;
+  color:#fff;
+
+}
+
+.alert{
+  bottom:55px !important
+}
+/*----------------switch-field end------------*/

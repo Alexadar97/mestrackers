@@ -1,0 +1,78 @@
+.body-content {
+    padding: 79px 33px 79px 250px !important;
+    background: #F6F6F6 !important;
+}
+h2.head {
+    font-family: Montserrat;
+    font-size: 19px;
+    color: #161616;
+    letter-spacing: 0;
+    font-weight: bold;
+}
+h3.head {
+    font-family: Montserrat;
+    font-size: 14px;
+    color: #2F3C53;
+    letter-spacing: 0;
+}
+label.head {
+    font-family: Montserrat;
+    font-size: 14px;
+    color: #2F3C53;
+    letter-spacing: 0;
+}
+table,th{
+    background: #F6F6F6;
+    border: 1px solid #979797;
+    color:#000;
+    font-weight: bold;
+}
+input.form-control {
+    background: #FFFFFF;
+    border: 1px solid #979797;
+    border-radius: 3px;
+}
+input[type="text"] {
+    background: #FFFFFF;
+    border: 1px solid #979797;
+    border-radius: 3px;
+    padding-left: 5px;
+}
+span.btn.btn-sm.notactive.notActive.btn-default {
+    background: #fff;
+}
+span.btn.btn-sm.Active.notActive.btn-default{
+    background: #fff;
+}
+span.btn.btn-default.btn-sm.Active{
+    background: #fff;
+}
+span.btn.btn-sm.notActive.btn-default{
+    background: #fff;
+}
+span.btn.btn-primary.btn-sm.notactive{
+    background: #000 !important;
+}
+span.btn.btn-sm.Active.active.btn-primary{
+    background: #000 !important;
+}
+span.btn.btn-sm.active.btn-primary{
+    background: #000 !important;
+}
+a.menus{
+    cursor: pointer;
+}
+button.btn.btn-sm.dowloadbtn.cursor {
+    background: #000;
+    border-radius: 3px;
+    color: #fff;
+}
+button.btn.btn-sm.dowloadbtn.cursor:hover{
+    background: #000 !important;
+    box-shadow: 0 0 3px #000 !important;
+}
+
+
+
+
+

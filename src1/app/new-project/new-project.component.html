@@ -1,0 +1,207 @@
+<div class=" body-content">
+  <div class="container-fluid">
+    <div class="col-md-12">
+      <div class="row">
+        <div class="col-md-12">
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb nopadding">
+              <li class="breadcrumb-item"><a routerLinkActive routerLink='../project' class="menus"> Home</a></li>
+              <li class="breadcrumb-item"><a routerLinkActive routerLink='../project' class="menus">Projects</a></li>
+              <li class="breadcrumb-item"><a routerLinkActive routerLink='new-project' class="menus menusactive">New Project</a></li>
+              <li class="breadcrumb-item"><a></a></li>
+              <li class="ml-auto"><button class="btn btn-sm btn-primary" (click)="newproject()">Back</button></li>
+            </ol>
+          </nav>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="row">
+          <div class="col-md-12">
+            <h2 class="head">Create New Project</h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <div class="form-group">
+              <h3 class="head">Project Name</h3>
+              <input type="text" autocomplete="on" class="form-control">
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <div class="form-group">
+              <label class="head">Project Type</label><br>
+              <div class="form-group">
+                <div class="input-group">
+                    <div class="switch-field">
+                        <input type="radio" value="Legislation" id=switch_3_left5 name="projecttype">
+                        <label for="switch_3_left5" class="reject">Legislation</label>
+                        <input type="radio" value="Export" id=switch_3_center5  name="projecttype" checked>
+                        <label for="switch_3_center5" class="monitor">Export</label>
+                        <input type="radio" value="Domestic" id=switch_3_center53 name="projecttype">
+                        <label for="switch_3_center53" class="monitor">Domestic</label>
+                      </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <div class="form-group">
+              <label class="head">Platform</label><br>
+              <div class="form-group">
+                <div class="input-group">
+                    <div class="switch-field">
+                        <input type="radio" value="HDT" id=switch_3_center  name="Platform" checked>
+                        <label for="switch_3_center" class="monitor">HDT</label>
+                        <input type="radio" value="MDT" id=switch_center name="Platform">
+                        <label for="switch_center" class="monitor">MDT</label>
+                      </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
+            <label class="head">Project Start Date</label>
+            <div class="grid-x grid-margin-x">
+              <div class="medium-4 large-3 cell">
+                <input type="text" #dp="bsDatepicker" bsDatepicker [bsValue]="bsValue">
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8">
+            <label class="head">Project SOP Date</label>
+            <div class="grid-x grid-margin-x">
+              <div class="medium-4 large-3 cell">
+                <input type="text" #dp="bsDatepicker" bsDatepicker [bsValue]="bsValue">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <div class="form-group">
+              <h3 class="head">Project Investment</h3>
+              <input type="text" autocomplete="on" class="form-control">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6"></div>
+      <div class="col-md-10">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="form-group">
+              <h3 class="head">Quality Gate Targets</h3>
+              <table class="table resposive">
+                <tr>
+                  <th style="border-right:none">Q2</th>
+                  <th style="border-left:none">
+                    <div class="grid-x grid-margin-x">
+                      <div class="medium-4 large-3 cell">
+                        <input type="text" #dp="bsDatepicker" bsDatepicker [bsValue]="bsValue">
+                      </div>
+                    </div>
+                  </th>
+                  <th style="border-right:none">Q3</th>
+                  <th style="border-left:none">
+                    <div class="grid-x grid-margin-x">
+                      <div class="medium-4 large-3 cell">
+                        <input type="text" #dp="bsDatepicker" bsDatepicker [bsValue]="bsValue">
+                      </div>
+                    </div>
+                  </th>
+                  <th style="border-right:none">Q4</th>
+                  <th style="border-left:none">
+                    <div class="grid-x grid-margin-x">
+                      <div class="medium-4 large-3 cell">
+                        <input type="text" #dp="bsDatepicker" bsDatepicker [bsValue]="bsValue">
+                      </div>
+                    </div>
+                  </th>
+                  <th style="border-right:none">Q5</th>
+                  <th style="border-left:none">
+                    <div class="grid-x grid-margin-x">
+                      <div class="medium-4 large-3 cell">
+                        <input type="text" #dp="bsDatepicker" bsDatepicker [bsValue]="bsValue">
+                      </div>
+                    </div>
+                  </th>
+                </tr>
+                <tr>
+                  <th style="border-right:none">Q6</th>
+                  <th style="border-left:none">
+                    <div class="grid-x grid-margin-x">
+                      <div class="medium-4 large-3 cell">
+                        <input type="text" #dp="bsDatepicker" bsDatepicker [bsValue]="bsValue">
+                      </div>
+                    </div>
+                  </th>
+                  <th style="border-right:none">Q7</th>
+                  <th style="border-left:none">
+                    <div class="grid-x grid-margin-x">
+                      <div class="medium-4 large-3 cell">
+                        <input type="text" #dp="bsDatepicker" bsDatepicker [bsValue]="bsValue">
+                      </div>
+                    </div>
+                  </th>
+                  <th style="border-right:none">Q8</th>
+                  <th style="border-left:none">
+                    <div class="grid-x grid-margin-x">
+                      <div class="medium-4 large-3 cell">
+                        <input type="text" #dp="bsDatepicker" bsDatepicker [bsValue]="bsValue">
+                      </div>
+                    </div>
+                  </th>
+                  <th style="border-right:none">Q9</th>
+                  <th style="border-left:none">
+                    <div class="grid-x grid-margin-x">
+                      <div class="medium-4 large-3 cell">
+                        <input type="text" #dp="bsDatepicker" bsDatepicker [bsValue]="bsValue">
+                      </div>
+                    </div>
+                  </th>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-2"></div>
+    </div>
+    <div class="row">
+      <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-cl-12 text-right">
+        <button type="button" class="btn btn-sm dowloadbtn cursor" (click)="submitproject()">Submit</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="Submit" role="dialog" data-backdrop="static" data-keyboard="false">
+    <div class="modal-dialog modal-sm">
+       <div class="modal-content">
+          <div class="modal-header">
+              <!-- <button type="button" class="close" data-dismiss="modal">&times;</button> -->
+              <h4 class="modal-title" style="text-transform: capitalize;">Submit
+              </h4>
+            </div>
+          <div class="modal-body">
+             <div class="row">
+                <div class="col-md-12">
+                   <p> Are you sure want to submit ?</p>
+                </div>
+             </div>
+          </div>
+          <div class="modal-footer">
+              <button type="button" class="btn btn-sm btn-primary" data-dismiss="modal">No </button>
+             <button type="button" class="btn btn-sm btn-primary" (click)="confirmSubmit()">yes</button>
+            
+          </div>
+       </div>
+    </div>
+ </div>

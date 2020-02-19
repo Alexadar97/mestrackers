@@ -1,0 +1,356 @@
+<div class=" body-content ">
+
+  <div class="col-md-12">
+    <nav aria-label="breadcrumb">
+
+      <ol class="breadcrumb nopadding">
+        <li class="breadcrumb-item"><a routerLinkActive routerLink='../project' class="menus"> Home</a></li>
+        <li class="breadcrumb-item"><a routerLinkActive routerLink='../project' class="menus">Projects</a></li>
+        <li class="breadcrumb-item"><a routerLinkActive routerLink='hdtbs-ganttview' class="menus menusactive">HDT BS
+            VI</a></li>
+        <li class="breadcrumb-item"><a></a></li>
+        <li class="ml-auto"><button class="btn btn-sm btn-primary" (click)="newproject()">Back</button></li>
+      </ol>
+    </nav>
+  </div>
+
+  <h3 class="hdtbs-heads py-4">HDT BS VI</h3>
+  <div class="row">
+    <div class="col-md-12 " style="display:flex">
+      <div class=" table-responsive chart-table1" style="width: 550px;">
+        <h3>Project Timeline</h3>
+        <table class="table  " id="myTable1part1">
+          <tbody>
+            <tr>
+              <td style="text-align:center;">
+                <p class="fix cursor">QG Deliverables</p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class=" table-responsive">
+        <table class="table  table-bordered " id="myTable1part2">
+          <thead class="text-danger" style="background: #FFFFFF;">
+            <tr>
+              <ng-container *ngFor="let year of datagrantt?.years;let index = index">
+                <th class="filterable-cell" colspan="12">{{year}}</th>
+              </ng-container>
+            </tr>
+            <tr>
+              <ng-container *ngFor="let year of datagrantt?.years;let index = index">
+                <ng-container *ngFor="let month of datagrantt?.months[index]; ">
+                  <th class="filterable-cell">{{month}}</th>
+                </ng-container>
+              </ng-container>
+            </tr>
+            <!-- <tr>
+                <ng-container *ngFor="let year of datagrantt?.years;let index = index">
+                  <ng-container *ngFor="let week of datagrantt?.weeknumbers[index];">
+                    <th class="filterable-cell">{{week}}</th>
+                  </ng-container>
+                </ng-container>
+              </tr> -->
+          </thead>
+          <tbody style="background: #EDEDED;">
+            <ng-container *ngFor="let list of datagrantt?.data; let i = index">
+              <tr style="height:50px">
+                <ng-container *ngFor="let year of datagrantt?.years; let index3 = index">
+                  <ng-container *ngFor="let month of datagrantt?.months[index3]">
+                    <td *ngIf="projectmonth(year,month,i);else PlandefaultTD">
+                      <div class="plan-cell"> 
+                          <p class="q-value " *ngIf="month=='JAN' && year==2018">Q1<br><img src="assets/images/green-tick.png"></p>
+                          <p class="q-value " *ngIf="month=='MAR' && year==2018">Q2<br><img src="assets/images/green-tick.png"></p>
+                          <p class="q-value " *ngIf="month=='FEB' && year==2019">Q3<br><img src="assets/images/green-tick.png"></p>
+                          <p class="q-value " *ngIf="month=='APR' && year==2019">Q4<br><img src="assets/images/green-tick.png"></p>
+                          <p class="q-value " *ngIf="month=='JAN' && year==2020">Q5<br><img src="assets/images/green-tick.png"></p>
+                          <!-- <p class="q-value2">Q2<br><img src="assets/images/green-tick.png"></p>
+                          <p class="q-value3">Q3<br><img src="assets/images/green-tick.png"></p>
+                          <p class="q-value4">Q4<br><img src="assets/images/green-tick.png"></p> -->
+                          </div>
+                    </td>
+                    <ng-template #PlandefaultTD>
+                      <td class="filterable-cell"></td>
+                    </ng-template>
+                  </ng-container>
+                </ng-container>
+              </tr>
+              <!-- <tr>
+                  <ng-container *ngFor="let year of datagrantt?.years; let index3 = index">
+                    <ng-container *ngFor="let week of datagrantt?.months[index3]">
+                      <td *ngIf="actual(year,week,i);else ActualdefaultTD">
+                        <p class="actual-cell"></p>
+                      </td>
+                      <ng-template #ActualdefaultTD>
+                        <td class="filterable-cell"></td>
+                      </ng-template>
+                    </ng-container>
+                  </ng-container>
+                </tr> -->
+            </ng-container>
+          </tbody>
+        </table>
+      </div>
+      <div class=" table-responsive chart-table1" style="width: 450px;">
+        <h3>ME Investment</h3>
+        <table class="table " id="myTable1part1">
+
+          <tbody>
+            <tr>
+
+              <td class="grouptd-text" style="text-align:left;">
+                <p>HDT: VA - 4.53 Cr</p>
+                <p>HDT: PTI - <span>Update to be taken form
+                    Engine Team</span></p>
+                <p>SCOPE &nbsp;&nbsp;&nbsp;<span><img src="assets/images/yellow-img.png"></span></p>
+              </td>
+              <!-- <td rowspan="2" class="fix"></td> -->
+
+            </tr>
+            <!-- <tr>
+                  <td class="fix" style="width: 90px;background: #e4e4e4;">
+                    <input class="form-control actualbg" #dpYMD="bsDatepicker" bsDatepicker [bsConfig]="{ dateInputFormat: 'DD-MM-YYYY' }" id='actualstart{{i}}'
+                      placeholder="Actual start date" value="{{list?.actualstart}}" (bsValueChange)="changedateActual(list.id,i,'astart')"
+                      *ngIf="list?.status == null">
+                    <input class="form-control actualbg" #dpYMD="bsDatepicker" bsDatepicker [bsConfig]="{ dateInputFormat: 'DD-MM-YYYY' }" id='actualstart'
+                      placeholder="Actual start date" value="{{list?.actualstart}}" disabled *ngIf="list?.status == 'pending' || list?.status == 'Completed' || list.status=='overdue' ">
+                  </td>
+                  <td class="fix" style="width: 90px;background:#b3c0ce;">
+                    <input class="form-control actualbg" #dpYMD="bsDatepicker" bsDatepicker [bsConfig]="{ dateInputFormat: 'DD-MM-YYYY' }" id='actualend{{i}}'
+                      placeholder="Actual end date" value="{{list?.actualend}}" (bsValueChange)="changedateActual(list.id,i,'aend')"
+                      *ngIf="list?.status=='pending' ">
+      
+                    <input class="form-control actualbg" #dpYMD="bsDatepicker" bsDatepicker [bsConfig]="{ dateInputFormat: 'DD-MM-YYYY' }" placeholder="Actual end date"
+                      value="{{list?.actualend}}" disabled *ngIf="list?.status=='Completed' || list?.status==null || list.status=='overdue'">
+                  </td>
+                </tr> -->
+
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  <div class="row py-4  my-4">
+    <div class=" col-md-12">
+      <div class="card table-responsive" id="eyetable">
+        <table class="table ">
+          <tbody>
+            <tr>
+              <td class="eyetd">
+                <span class="tick-box-first" (click)="eyemodal()"><img class="icon-img1"
+                    src="assets/images/eye-open.png"></span>
+                <p class="text-box">Investment Facility Needs</p>
+              </td>
+              <td class="eyetd">
+                <span class="tick-box" (click)="eyemodal()"><img class="icon-img1"
+                    src="assets/images/eye-open.png"></span>
+                <p class="text-box">B Level Planing</p>
+              </td>
+              <td class="eyetd">
+                <span class="tick-box" (click)="eyemodal()"><img class="icon-img1"
+                    src="assets/images/eye-open.png"></span>
+                <p class="text-box">Facility Readiness Plan</p>
+              </td>
+              <td class="eyetd">
+                <span class="tick-box" (click)="eyemodal()"><img class="icon-img1"
+                    src="assets/images/eye-open.png"></span>
+                <p class="text-box">Cash Flow Plan</p>
+              </td>
+              <td class="eyetd">
+                <span class="tick-box"  (click)="uploadmodal()"><img class="icon-img2" src="assets/images/upload-button.png"></span>
+                <p class="text-box">DMU Study </p>
+              </td>
+              <td class="eyetd">
+                <span class="tick-box"  (click)="uploadmodal()"><img class="icon-img2" src="assets/images/upload-button.png"></span>
+                <p class="text-box">C Sample Feedback </p>
+              </td>
+              <td class="eyetd">
+                <span class="tick-box" (click)="uploadmodal()"><img class="icon-img2"
+                    src="assets/images/upload-button.png"></span>
+                <p class="text-box">Line Readiness </p>
+              </td>
+              <td class="eyetd">
+                <span class="tick-box" (click)="uploadmodal()"><img class="icon-img2"
+                    src="assets/images/upload-button.png"></span>
+                <p class="text-box">ERGO Check </p>
+              </td>
+              <td class="eyetd">
+                <span class="tick-box" (click)="uploadmodal()"><img class="icon-img2"
+                    src="assets/images/upload-button.png"></span>
+                <p class="text-box">Challenges</p>
+              </td>
+              <td class="eyetd">
+                <span class="tick-box" (click)="uploadmodal()"><img class="icon-img2"
+                    src="assets/images/upload-button.png"></span>
+                <p class="text-box">+HC </p>
+              </td>
+              <td class="eyetd">
+                <span class="tick-box" (click)="uploadmodal()"><img class="icon-img2"
+                    src="assets/images/upload-button.png"></span>
+                <p class="text-box">SOP Feedback</p>
+              </td>
+              <td class="eyetd">
+                <span class="tick-box-last" (click)="uploadmodal()"><img class="icon-img2"
+                    src="assets/images/upload-button.png"></span>
+                <p class="text-box">Efficiency Improvement</p>
+              </td>
+            </tr>
+          
+          </tbody>
+        </table>
+
+      </div>
+    </div>
+  </div>
+  <div class="row my-4">
+    <div class="col-md-4">
+      <div class="card">
+        <div class="card-head">
+          <h6 class="pl-3">Vehicle Assembly Status</h6>
+        </div>
+        <div class="card-body">
+          <p>DMU review for all models is completed and waiting from R&D to confirm on frozen status, and ready to go
+            for signoff process</p>
+          <p>HDT BS VI budget overshoot is projected based on repackaging and internally aligned, discussion with F&C in
+            progress</p>
+          <p>BS IV issues over BS VI alignment with R&D PPS and other stake holders in progress</p>
+          <section class="button-cab">
+            <div class="row" style="justify-content:flex-end">
+              <button type="button" class="btn btn-sm btn-primary" (click)="btnclick()">Cab</button>
+              <button type="button" class="btn btn-sm btn-primary" (click)="btnclick()">Chassis</button>
+              <button type="button" class="btn btn-sm btn-primary" (click)="btnclick()">EOL</button>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card">
+        <div class="card-head">
+          <h6 class="pl-3">Power Train Status</h6>
+        </div>
+        <div class="card-body">
+          <p>Close co-ordination with R&D is planned in order to overcome the delay in impact study and ME ordering</p>
+          <p>ME is requesting R&D to frozen the Load body DMU to start EOL review and activity</p>
+          <p>ATS assembling and logistics planning is under progress with the output of C sample build</p>
+          <p>ATS Horizontal Exhaust pipe receiving condition concept explained to procur.</p>
+          <section class="button-engine">
+            <div class="row" style="justify-content:flex-end">
+              <button type="button" class="btn btn-sm btn-primary" (click)="btnclick()">Engine</button>
+              <button type="button" class="btn btn-sm btn-primary" (click)="btnclick()">Transmission</button>
+              <button type="button" class="btn btn-sm btn-primary" (click)="btnclick()">Testing</button>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card">
+        <div class="card-head">
+          <h6 class="pl-3">CIW / Frame / Paint status</h6>
+        </div>
+        <div class="card-body">
+          <p>Proto build is requested for (refer proto trails slide)
+            ATS sub assy & chassis mounting
+            Modf Battery carrier sub assy
+            Engine with Trans drop
+            Fender bracket tightnening
+            Palm coupling assy
+            Modf Adblue tank sub assy etc…</p>
+          <p>Review on EOL/FBV DMU in progress along with Flashing requirements</p>
+          <section class="button-ciw">
+            <div class="row" style="justify-content:flex-end">
+              <button type="button" class="btn btn-sm btn-primary" (click)="btnclick()">CIW</button>
+              <button type="button" class="btn btn-sm btn-primary" (click)="btnclick()">Frame</button>
+              <button type="button" class="btn btn-sm btn-primary" (click)="btnclick()">Paint</button>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- modal -->
+<div id="modal" class="modal fade">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+        <div class="row" *ngIf="modalname == 'upload' || modalname == 'download' ">
+          <div class="col-md-12">
+            <label for="" class="editmodal">Upload Files</label>
+          </div>
+          <div class="col-md-12 text-center">
+            <div class="dragdropfile">
+              <label for="uploadFile" class="btn btn-sm uploadbtn cursor">
+                <img class="upload" src="assets/images/upload.png">&nbsp;&nbsp; Upload Files</label>
+              <br> {{filename}}
+              <input type="file" id="uploadFile" #uploadFile style="display: none" (change)="uploadfile($event)"
+                accept="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet,application/vnd.ms-excel">
+
+            </div>
+          </div>
+          
+        </div>
+        <div class="row" *ngIf="modalname == 'upload' || modalname == 'download' ">
+            <div class="col-md-12 text-right py-3">
+              <button type="button" class="btn btn-sm dowloadbtn cursor" data-dismiss="modal">Cancel</button>&nbsp;&nbsp;
+              <button type="button" class="btn btn-sm dowloadbtn cursor">Submit</button>
+            </div>
+          </div>
+        <section class="modal-bg" *ngIf="modalname == 'download'">
+          <div class="row" style="border-top: 1px solid #979797;">
+            <div class="col-md-12">
+              <label for="" class="editmodal">Uploaded Files</label>
+            </div>
+
+            <div class="col-md-6">
+              <label for="" class="editmodal">1. File Name 1</label>
+            </div>
+            <div class="col-md-6">
+              <div class="dragdropfile">
+                <label for="uploadFile" class="btn btn-sm dowloadbtn cursor">
+                  <img src="assets/images/download.png">&nbsp;&nbsp; Download Files</label>
+                <br> {{filename}}
+                <input type="file" id="uploadFile" #uploadFile style="display: none" (change)="uploadfile($event)"
+                  accept="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet,application/vnd.ms-excel">
+
+              </div>
+
+            </div>
+
+            <div class="col-md-6">
+              <label for="" class="editmodal">2. File Name 2</label>
+            </div>
+            <div class="col-md-6">
+              <div class="dragdropfile">
+                <label for="uploadFile" class="btn btn-sm dowloadbtn cursor">
+                  <img src="assets/images/download.png">&nbsp;&nbsp; Download Files</label>
+                <br> {{filename}}
+                <input type="file" id="uploadFile" #uploadFile style="display: none" (change)="uploadfile($event)"
+                  accept="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet,application/vnd.ms-excel">
+
+              </div>
+
+            </div>
+
+            <div class="col-md-6">
+              <label for="" class="editmodal">3. File Name 3</label>
+            </div>
+            <div class="col-md-6">
+              <div class="dragdropfile">
+                <label for="uploadFile" class="btn btn-sm dowloadbtn cursor">
+                  <img src="assets/images/download.png">&nbsp;&nbsp; Download Files</label>
+                <br> {{filename}}
+                <input type="file" id="uploadFile" #uploadFile style="display: none" (change)="uploadfile($event)"
+                  accept="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet,application/vnd.ms-excel">
+              </div>
+            </div>
+          </div>
+        </section>
+       
+
+      </div>
+    </div>
+  </div>
+</div>

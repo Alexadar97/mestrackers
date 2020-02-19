@@ -1,0 +1,203 @@
+<div class=" body-content table-responsive innerbodyScroll">
+  <div class="col-md-12">
+    <nav aria-label="breadcrumb">
+
+      <ol class="breadcrumb nopadding">
+
+        <li class="breadcrumb-item"><a routerLinkActive routerLink='../project' class="menus"> Home</a></li>
+        <li class="breadcrumb-item"><a routerLinkActive routerLink='../project' class="menus">Projects</a></li>
+        <li class="breadcrumb-item"><a class="menus menusactive">ME PTI Engine Readiness Timeline plan</a></li>
+        <li class="ml-auto"><button class="btn btn-sm btn-primary" (click)="backpage()">Back</button></li>
+      </ol>
+
+    </nav>
+
+  </div>
+  <h3 class="hdtbs-heads py-4">HDT BS VI : ME PTI Engine Readiness Timeline plan</h3>
+  <div class="col-md-12 nopadding" style="display:flex">
+    <div class=" table-responsive chart-table1" style="width: 580px;">
+
+      <table class="table  table-bordered " id="myTable1part1">
+        <thead class="text-danger">
+          <tr>
+            <th rowspan="2" colspan="3">
+              <h4>Project / Activity</h4>
+            </th>
+          </tr>
+          <tr></tr>
+          <tr>
+            <th class="fix"></th>
+
+            <!-- <th class="fix" rowspan="3">Appliclablity</th> -->
+            <th class="fix">Inv. Cr</th>
+            <th class="fix">I/O number</th>
+          </tr>
+
+        </thead>
+
+        <tbody *ngFor="let list of datagrantt?.data; let i = index">
+          <tr>
+
+            <td style="text-align:left;">
+              <a class="fix cursor" style="padding-left:0px;">{{i+1}} {{list.activity}}</a>
+            </td>
+            <!-- <td rowspan="2" class="fix"></td> -->
+            <td class="fix" class="fix">
+              <a class="fix cursor">{{list.values}}</a>
+            </td>
+            <td class="fix">
+              <a class="fix cursor">{{list.ionumber}}</a>
+
+            </td>
+          </tr>
+          <!-- <tr>
+              <td class="fix" style="width: 90px;background: #e4e4e4;">
+                <input class="form-control actualbg" #dpYMD="bsDatepicker" bsDatepicker [bsConfig]="{ dateInputFormat: 'DD-MM-YYYY' }" id='actualstart{{i}}'
+                  placeholder="Actual start date" value="{{list?.actualstart}}" (bsValueChange)="changedateActual(list.id,i,'astart')"
+                  *ngIf="list?.status == null">
+                <input class="form-control actualbg" #dpYMD="bsDatepicker" bsDatepicker [bsConfig]="{ dateInputFormat: 'DD-MM-YYYY' }" id='actualstart'
+                  placeholder="Actual start date" value="{{list?.actualstart}}" disabled *ngIf="list?.status == 'pending' || list?.status == 'Completed' || list.status=='overdue' ">
+              </td>
+              <td class="fix" style="width: 90px;background:#b3c0ce;">
+                <input class="form-control actualbg" #dpYMD="bsDatepicker" bsDatepicker [bsConfig]="{ dateInputFormat: 'DD-MM-YYYY' }" id='actualend{{i}}'
+                  placeholder="Actual end date" value="{{list?.actualend}}" (bsValueChange)="changedateActual(list.id,i,'aend')"
+                  *ngIf="list?.status=='pending' ">
+  
+                <input class="form-control actualbg" #dpYMD="bsDatepicker" bsDatepicker [bsConfig]="{ dateInputFormat: 'DD-MM-YYYY' }" placeholder="Actual end date"
+                  value="{{list?.actualend}}" disabled *ngIf="list?.status=='Completed' || list?.status==null || list.status=='overdue'">
+              </td>
+            </tr> -->
+
+        </tbody>
+      </table>
+    </div>
+    <div class=" table-responsive">
+      <table class="table  table-bordered " id="myTable1part2">
+        <thead class="text-danger" style="background: #FFFFFF;">
+          <tr>
+            <ng-container *ngFor="let year of datagrantt?.years;let index = index">
+              <th class="filterable-cell" colspan="12">{{year}}</th>
+            </ng-container>
+          </tr>
+          <tr>
+            <ng-container *ngFor="let year of datagrantt?.years;let index = index">
+              <ng-container *ngFor="let month of datagrantt?.months[index]; ">
+                <th class="filterable-cell">{{month}}</th>
+              </ng-container>
+            </ng-container>
+          </tr>
+          <tr>
+          <tr>
+            <ng-container *ngFor="let year of datagrantt?.years;let index = index">
+              <ng-container *ngFor="let month of datagrantt?.months[index]; ">
+                <th style="padding: 0PX !important;border-left: none;border-right: none;">
+                  <div class="plan-cell-blue">
+                    <p class="q-value " *ngIf="month=='MAY' && year==2018">Q1<br><img
+                        src="assets/images/green-tick.png"></p>
+                    <p class="q-value " *ngIf="month=='MAR' && year==2018">Q2<br><img
+                        src="assets/images/green-tick.png"></p>
+                    <p class="q-value " *ngIf="month=='FEB' && year==2019">Q3<br><img
+                        src="assets/images/green-tick.png"></p>
+                    <p class="q-value " *ngIf="month=='APR' && year==2019">Q4<br><img
+                        src="assets/images/green-tick.png"></p>
+                    <p class="q-value " *ngIf="month=='JAN' && year==2020">Q5<br><img
+                        src="assets/images/green-tick.png"></p>
+                  </div>
+                </th>
+              </ng-container>
+            </ng-container>
+          </tr>
+        </thead>
+        <tbody style="background: #F6F9FB;">
+          <ng-container *ngFor="let list of datagrantt?.data; let i = index">
+            <tr>
+              <ng-container *ngFor="let year of datagrantt?.years; let index3 = index">
+                <ng-container *ngFor="let month of datagrantt?.months[index3];let j=index;">
+
+                  <td>
+                    <div [ngSwitch]="projectmonth(year,month,i)">
+                      <p *ngSwitchCase=1 class="plan-cell"><img src="assets/images/Rectangle-yellow.png" class="img1">
+                      </p>
+                      <p *ngSwitchCase=2 class="plan-cell"> <img src="assets/images/red-color.png" class="img2">
+                      </p>
+                      <p *ngSwitchCase=3 class="plan-cell"> <img src="assets/images/blue-rect.png" class="img3">
+                      </p>
+                      <p *ngSwitchCase=4 class="plan-cell"> <img src="assets/images/voilet-rect.png" class="img4">
+                      </p>
+                      <p *ngSwitchCase=5 class="plan-cell"> <img src="assets/images/green-color.png" class="img5">
+                      </p>
+                      <p *ngSwitchCase=6 class="plan-cell">
+                      </p>
+                      <p class="filterable-cell" *ngSwitchCase=7> </p>
+                    </div>
+                  </td>
+
+                </ng-container>
+              </ng-container>
+            </tr>
+          </ng-container>
+        </tbody>
+      </table>
+    </div>
+    <div class=" table-responsive chart-table1" style="width: 450px;">
+
+      <table class="table  table-bordered " id="myTable1part1">
+        <thead class="text-danger">
+          <tr>
+            <th rowspan="3">
+              <h4>Project / Activity</h4>
+            </th>
+          </tr>
+          <tr>
+            <th class="fix"></th>
+          </tr>
+          <tr>
+            <th class="fix"></th>
+          </tr>
+        </thead>
+
+        <tbody *ngFor="let list of datagrantt?.data; let i = index">
+          <tr>
+
+            <td style="text-align:left;">
+              <a class="fix cursor" style="padding-left:100px;">{{list.name}}</a>
+            </td>
+            <!-- <td rowspan="2" class="fix"></td> -->
+
+          </tr>
+          <!-- <tr>
+                <td class="fix" style="width: 90px;background: #e4e4e4;">
+                  <input class="form-control actualbg" #dpYMD="bsDatepicker" bsDatepicker [bsConfig]="{ dateInputFormat: 'DD-MM-YYYY' }" id='actualstart{{i}}'
+                    placeholder="Actual start date" value="{{list?.actualstart}}" (bsValueChange)="changedateActual(list.id,i,'astart')"
+                    *ngIf="list?.status == null">
+                  <input class="form-control actualbg" #dpYMD="bsDatepicker" bsDatepicker [bsConfig]="{ dateInputFormat: 'DD-MM-YYYY' }" id='actualstart'
+                    placeholder="Actual start date" value="{{list?.actualstart}}" disabled *ngIf="list?.status == 'pending' || list?.status == 'Completed' || list.status=='overdue' ">
+                </td>
+                <td class="fix" style="width: 90px;background:#b3c0ce;">
+                  <input class="form-control actualbg" #dpYMD="bsDatepicker" bsDatepicker [bsConfig]="{ dateInputFormat: 'DD-MM-YYYY' }" id='actualend{{i}}'
+                    placeholder="Actual end date" value="{{list?.actualend}}" (bsValueChange)="changedateActual(list.id,i,'aend')"
+                    *ngIf="list?.status=='pending' ">
+    
+                  <input class="form-control actualbg" #dpYMD="bsDatepicker" bsDatepicker [bsConfig]="{ dateInputFormat: 'DD-MM-YYYY' }" placeholder="Actual end date"
+                    value="{{list?.actualend}}" disabled *ngIf="list?.status=='Completed' || list?.status==null || list.status=='overdue'">
+                </td>
+              </tr> -->
+
+        </tbody>
+      </table>
+      <br>
+      <br>
+    </div>
+  </div>
+
+  <div class="col-md-12">
+    <ul class="legents py-4">
+      <li><img src="assets/images/Rectangle-yellow.png"> &nbsp;RFQ &nbsp;&nbsp;</li>
+      <li><img src="assets/images/red-color.png">&nbsp;PR/PO &nbsp;&nbsp;</li>
+      <li><img src="assets/images/blue-rect.png"> &nbsp;Material Receipt &nbsp;&nbsp;</li>
+      <li><img src="assets/images/voilet-rect.png">&nbsp;Start of I & C&nbsp;&nbsp;</li>
+      <li><img src="assets/images/green-color.png">&nbsp;Complrtion &nbsp;&nbsp;</li>
+    </ul>
+
+  </div>
+</div>

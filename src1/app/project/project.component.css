@@ -1,0 +1,215 @@
+.border-style {
+    border-bottom: 2px solid #979797;
+    padding-top: 35px;
+}
+.border-head{
+    color: #161616;
+    font-weight: 800;
+    font-size: 20px;
+    font-family: montserrat;
+}
+.card {
+    background: #FFFFFF;
+    box-shadow: 0 1px 1px 0 rgba(0,0,0,0.50);
+    border-radius: 8px;
+    padding: 10px;
+    cursor: pointer;
+    transition:0.4s;
+}
+.card:hover{
+    box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.50);
+}
+.card-content{
+    border:1px solid #B3B6BF;
+    color: #929AA8;
+}
+.rowcard{
+    padding: 7px 0px 0px 13px;
+}
+.inside-content {
+    border-right: 1px solid #B3B6BF;;
+}
+.card-content span {
+    font-size: 9px;
+    font-family: montserrat;
+    font-weight: bold;
+}
+.card-content p {
+    font-size: 10px;
+    font-weight: bold;
+    font-family: montserrat;
+    margin-top: 0;
+    color: #2F3C53;
+
+}
+.card-content h6 {
+    font-size: 12px;
+    font-family: montserrat;
+    font-weight: bold;
+    margin:0px;
+    color: #2F3C53;
+}
+.card h4{
+    color: #2F3C53;
+    font-weight: bold;
+    font-family: montserrat;
+    margin-top:13px !important; 
+    font-size: 15px;    
+   
+}
+
+span.card-text {
+    color: #64728C;
+    font-family: montserrat;
+    font-size: 11px;
+}
+label.head {
+    font-family: Montserrat;
+    font-size: 21px;
+    color: #161616;
+    letter-spacing: 0;
+    font-weight: bold;
+}
+.btn-success {
+    background-color: #000;
+    border-color: #000;
+    box-shadow: none;
+    border-radius: 2px;
+    font-size: 10px;
+}
+.btn-success:active {
+    background-color: #000 !important;
+    border-color: #000 !important;
+    box-shadow: none !important;
+}
+.btn-success:focus {
+    background-color: #000 !important;
+    border-color: #000 !important;
+    box-shadow: none !important;
+}
+section.project-bg {
+    padding: 26px 0px 44px 0px;
+}
+section.project-list{
+    padding: 11px 0px 2px 0px;
+}
+.body-content {
+    padding: 79px 33px 0px 250px !important;
+    background: #F6F6F6 !important;
+}
+select.form-control-select {
+    background: #FFFFFF;
+    box-shadow: 0 1px 1px 0 rgba(0,0,0,0.50);
+    border-radius: 3px;
+}
+label.sort {
+    font-family: Montserrat;
+    font-size: 13px;
+    color: #333333;
+    letter-spacing: 0;
+    padding: 0px 22px 0px 0px;
+}
+
+select.form-control-select {
+    font-family: Montserrat;
+    font-size: 11px;
+    color: #979797;
+    letter-spacing: 0;
+    padding: 5px 4px 5px 8px;
+    background: #FFFFFF;
+    box-shadow: 0px 1px 1px 0px rgba(0,0,0,0.50);
+    border-radius: 3px;
+    border: none;   
+    cursor: pointer;
+}
+/*start button style*/
+@keyframes sheen {
+    0% {
+        transform: skewY(-45deg) translateX(0);
+   }
+    100% {
+        transform: skewY(-45deg) translateX(12.5em);
+   }
+}
+.wrapper {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.button {
+    padding: 0.75em 2em;
+    text-align: center;
+    text-decoration: none;
+    color: #2194e0;
+    border: 2px solid #2194e0;
+    font-size: 24px;
+    display: inline-block;
+    border-radius: 0.3em;
+    transition: .9s;
+    position: relative;
+    overflow: hidden;
+}
+.button:before {
+    content: "";
+    background-color: rgba(255, 255, 255, 0.5);
+    height: 100%;
+    width: 3em;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: -4.5em;
+    transform: skewX(-45deg) translateX(0);
+    transition: 0.6s;
+}
+.button:hover {
+    background-color: #000;
+    color: #fff;
+}
+.button:hover:before {
+    transform: skewX(-45deg) translateX(13.5em);
+    transition: all 0.5s ease-in-out;
+}
+.button{
+    padding: 0.75em 2em;
+    text-align: center;
+    text-decoration: none;
+    color: #fff !important;
+    cursor: pointer;
+    border: none;
+    font-size: 9px;
+    display: inline-block;
+    border-radius: 0.3em;
+    transition: all 0.2s ease-in-out;
+    position: relative;
+    overflow: hidden;
+    background: #000;
+    padding: 5px 13px 5px 13px;
+}
+/*end button style*/
+
+@media (min-width:478px) and (max-width:768px){
+    .body-content {
+        padding: 29px 0px 0px 0px !important;
+    }
+}
+@media (max-width:478px){
+    .card {
+        margin: 25px 61px 0px 61px;
+    }
+    .body-content {
+        padding: 29px 0px 0px 0px !important;
+    }
+    .col-12.col-sm-6.col-md-6.col-lg-6.col-xl-6.text-right {
+        text-align: left !important;
+        margin: 21px auto;
+    }
+    section.project-bg{
+        padding: 2px 0px 44px 0px;
+    }
+}
+a.menus{
+    cursor: pointer;
+}
+

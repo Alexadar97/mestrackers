@@ -1,0 +1,463 @@
+<div class=" body-content table-responsive innerbodyScroll">
+  <div class="row">
+    <div class="col-md-4">
+      <nav aria-label="breadcrumb">
+
+        <ol class="breadcrumb nopadding">
+
+          <li class="breadcrumb-item"><a routerLinkActive routerLink='../project' class="menus"> Home</a></li>
+          <li class="breadcrumb-item"><a routerLinkActive routerLink='../project' class="menus">Projects</a></li>
+          <li class="breadcrumb-item"><a class="menus menusactive">ME PTI Engine Readiness Timeline plan</a></li>
+
+        </ol>
+
+      </nav>
+
+    </div>
+    <div class="col-md-4">
+      <h3 class="hdtbs-heads">HDT BS VI : ME PTI Engine Readiness Timeline plan</h3>
+    </div>
+    <div class="col-md-4 text-right">
+      <button class="btn btn-sm dowloadbtn cursor" (click)="backpage()">Back</button>
+    </div>
+  </div>
+  <div class="row" style="margin-top: 1.7rem;">
+    <div class=" col-md-12">
+      <div class="card table-responsive" id="eyetable">
+        <table class="table ">
+          <tbody>
+            <tr>
+              <td class="eyetd">
+                <span class="tick-box-first" (click)="eyemodal()"><img class="icon-img1"
+                    src="assets/images/eye-open.png"></span>
+                <p class="text-box">B Case Feedback</p>
+              </td>
+              <td class="eyetd">
+                <span class="tick-box" (click)="eyemodal()"><img class="icon-img1"
+                    src="assets/images/eye-open.png"></span>
+                <p class="text-box">C Sample Feedback</p>
+              </td>
+              <td class="eyetd">
+                <span class="tick-box" (click)="eyemodal()"><img class="icon-img1"
+                    src="assets/images/eye-open.png"></span>
+                <p class="text-box">Impact / DMU Study</p>
+              </td>
+              <td class="eyetd">
+                <span class="tick-box" (click)="eyemodal()"><img class="icon-img1"
+                    src="assets/images/eye-open.png"></span>
+                <p class="text-box">Investment Facility Needs</p>
+              </td>
+              <td class="eyetd">
+                <span class="tick-box" (click)="uploadmodal()"><img class="icon-img2"
+                    src="assets/images/upload-button.png"></span>
+                <p class="text-box">B Level Planning </p>
+              </td>
+              <td class="eyetd">
+                <span class="tick-box" (click)="uploadmodal()"><img class="icon-img2"
+                    src="assets/images/upload-button.png"></span>
+                <p class="text-box">Facility Readiness Plan </p>
+              </td>
+              <td class="eyetd">
+                <span class="tick-box" (click)="uploadmodal()"><img class="icon-img2"
+                    src="assets/images/upload-button.png"></span>
+                <p class="text-box">Cash Flow Plan </p>
+              </td>
+              <td class="eyetd">
+                <span class="tick-box" (click)="uploadmodal()"><img class="icon-img2"
+                    src="assets/images/upload-button.png"></span>
+                <p class="text-box">Process Sheet </p>
+              </td>
+              <td class="eyetd">
+                <span class="tick-box" (click)="uploadmodal()"><img class="icon-img2"
+                    src="assets/images/upload-button.png"></span>
+                <p class="text-box">Tool Readiness</p>
+              </td>
+              <td class="eyetd">
+                <span class="tick-box" (click)="uploadmodal()"><img class="icon-img2"
+                    src="assets/images/upload-button.png"></span>
+                <p class="text-box">Process Readiness </p>
+              </td>
+              <td class="eyetd">
+                <span class="tick-box" (click)="uploadmodal()"><img class="icon-img2"
+                    src="assets/images/upload-button.png"></span>
+                <p class="text-box">Line Readiness</p>
+              </td>
+              <td class="eyetd">
+                <span class="tick-box" (click)="uploadmodal()"><img class="icon-img2"
+                    src="assets/images/upload-button.png"></span>
+                <p class="text-box">D Sample Feedback </p>
+              </td>
+              <td class="eyetd">
+                <span class="tick-box" (click)="uploadmodal()"><img class="icon-img2"
+                    src="assets/images/upload-button.png"></span>
+                <p class="text-box">ERGO Check</p>
+              </td>
+              <td class="eyetd">
+                <span class="tick-box" (click)="uploadmodal()"><img class="icon-img2"
+                    src="assets/images/upload-button.png"></span>
+                <p class="text-box">Challenges</p>
+              </td>
+              <td class="eyetd">
+                <span class="tick-box" (click)="uploadmodal()"><img class="icon-img2"
+                    src="assets/images/upload-button.png"></span>
+                <p class="text-box">+HC </p>
+              </td>
+              <td class="eyetd">
+                <span class="tick-box" (click)="uploadmodal()"><img class="icon-img2"
+                    src="assets/images/upload-button.png"></span>
+                <p class="text-box">HPU</p>
+              </td>
+              <td class="eyetd">
+                <span class="tick-box" (click)="uploadmodal()"><img class="icon-img2"
+                    src="assets/images/upload-button.png"></span>
+                <p class="text-box">SOP Feedback</p>
+              </td>
+              <td class="eyetd">
+                <span class="tick-box" (click)="uploadmodal()"><img class="icon-img2"
+                    src="assets/images/upload-button.png"></span>
+                <p class="text-box">Efficiency Improvement </p>
+              </td>
+              <td class="eyetd">
+                <span class="tick-box-last" (click)="uploadmodal()"><img class="icon-img2"
+                    src="assets/images/upload-button.png"></span>
+                <p class="text-box">Sign off</p>
+              </td>
+
+            </tr>
+          </tbody>
+        </table>
+
+      </div>
+    </div>
+  </div>
+  <div class="col-md-12 nopadding" style="display:flex">
+    <div class=" table-responsive chart-table1" style="width: 582px;">
+
+      <table class="table  table-bordered " id="myTable1part1">
+        <thead class="text-danger">
+          <tr>
+            <th colspan="3" style="border-bottom: none  !important;">
+              <h4 style="position: relative;top: 35px;">Project / Activity</h4>
+            </th>
+          </tr>
+          <tr>
+            <th class="fix" colspan="3" style="border-bottom: none  !important;"></th>
+          </tr>
+          <tr>
+            <th class="fix" colspan="3" style="border-bottom: none  !important;"></th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td class="fix"></td>
+            <td class="fix">Inv. Cr</td>
+            <td class="fix">I/O number</td>
+          </tr>
+          <ng-container *ngFor="let list of datagrantt?.data; let i = index">
+            <tr>
+              <td style="text-align:left;">
+                <a class="fix cursor" style="padding-left:0px;">{{i+1}}.{{list.activity}}</a>
+              </td>
+              <!-- <td rowspan="2" class="fix"></td> -->
+              <td class="fix" class="fix">
+                <a class="fix cursor">{{list.values}}</a>
+              </td>
+              <td class="fix">
+                <a class="fix cursor">{{list.ionumber}}</a>
+
+              </td>
+            </tr>
+          </ng-container>
+
+          <!-- <tr>
+              <td class="fix" style="width: 90px;background: #e4e4e4;">
+                <input class="form-control actualbg" #dpYMD="bsDatepicker" bsDatepicker [bsConfig]="{ dateInputFormat: 'DD-MM-YYYY' }" id='actualstart{{i}}'
+                  placeholder="Actual start date" value="{{list?.actualstart}}" (bsValueChange)="changedateActual(list.id,i,'astart')"
+                  *ngIf="list?.status == null">
+                <input class="form-control actualbg" #dpYMD="bsDatepicker" bsDatepicker [bsConfig]="{ dateInputFormat: 'DD-MM-YYYY' }" id='actualstart'
+                  placeholder="Actual start date" value="{{list?.actualstart}}" disabled *ngIf="list?.status == 'pending' || list?.status == 'Completed' || list.status=='overdue' ">
+              </td>
+              <td class="fix" style="width: 90px;background:#b3c0ce;">
+                <input class="form-control actualbg" #dpYMD="bsDatepicker" bsDatepicker [bsConfig]="{ dateInputFormat: 'DD-MM-YYYY' }" id='actualend{{i}}'
+                  placeholder="Actual end date" value="{{list?.actualend}}" (bsValueChange)="changedateActual(list.id,i,'aend')"
+                  *ngIf="list?.status=='pending' ">
+  
+                <input class="form-control actualbg" #dpYMD="bsDatepicker" bsDatepicker [bsConfig]="{ dateInputFormat: 'DD-MM-YYYY' }" placeholder="Actual end date"
+                  value="{{list?.actualend}}" disabled *ngIf="list?.status=='Completed' || list?.status==null || list.status=='overdue'">
+              </td>
+            </tr> -->
+
+        </tbody>
+      </table>
+    </div>
+    <div class=" table-responsive">
+      <table class="table  table-bordered " id="myTable1part2">
+        <thead class="text-danger" style="background: #FFFFFF;">
+          <tr>
+            <ng-container *ngFor="let year of datagrantt?.years;let index = index">
+              <th class="filterable-cell" colspan="12">{{year}}</th>
+            </ng-container>
+          </tr>
+          <tr>
+            <ng-container *ngFor="let year of datagrantt?.years;let index = index">
+              <ng-container *ngFor="let month of datagrantt?.months[index]; ">
+                <th class="filterable-cell">{{month}}</th>
+              </ng-container>
+            </ng-container>
+          </tr>
+          <tr>
+            <ng-container *ngFor="let year of datagrantt?.years;let index = index">
+              <ng-container *ngFor="let month of datagrantt?.months[index]; ">
+                <th style="padding: 0PX !important;border-left: none;border-right: none;">
+                  <div class="plan-cell-blue">
+                    <p class="q-value " (click)="eyemodal()" *ngIf="month=='MAY' && year==2018">Q1<br><img
+                        src="assets/images/green-tick.png"></p>
+                    <p class="q-value " (click)="eyemodal()" *ngIf="month=='MAR' && year==2018">Q2<br><img
+                        src="assets/images/green-tick.png"></p>
+                    <p class="q-value " (click)="eyemodal()" *ngIf="month=='FEB' && year==2019">Q3<br><img
+                        src="assets/images/green-tick.png"></p>
+                    <p class="q-value " (click)="eyemodal()" *ngIf="month=='APR' && year==2019">Q4<br><img
+                        src="assets/images/green-tick.png"></p>
+                    <p class="q-value " (click)="eyemodal()" *ngIf="month=='JAN' && year==2020">Q5<br><img
+                        src="assets/images/green-tick.png"></p>
+                    <p class="q-value " *ngIf="month=='JUN' && year==2018" (click)="uploadmodal()">Q6<br><img
+                        src="assets/images/yellow-tick.png"></p>
+                    <p class="q-value " *ngIf="month=='JUL' && year==2019" (click)="uploadmodal()">Q7<br><img
+                        src="assets/images/yellow-tick.png"></p>
+                    <p class="q-value " *ngIf="month=='AUG' && year==2019" (click)="uploadmodal()">Q8<br><img
+                        src="assets/images/yellow-tick.png"></p>
+                    <p class="q-value " *ngIf="month=='SEP' && year==2020" (click)="uploadmodal()">Q9<br><img
+                        src="assets/images/yellow-tick.png"></p>
+                  </div>
+                </th>
+              </ng-container>
+            </ng-container>
+          </tr>
+        </thead>
+        <tbody style="background: #F6F9FB;">
+          <tr>
+            <ng-container *ngFor="let year of datagrantt?.years; let index33 = index">
+              <ng-container *ngFor="let month of datagrantt?.months[index33];">
+                <td>
+                  <p class="filterable-cell"> </p>
+                </td>
+              </ng-container>
+            </ng-container>
+          </tr>
+
+          <ng-container *ngFor="let list of datagrantt?.data; let i = index">
+            <tr>
+              <ng-container *ngFor="let year of datagrantt?.years; let index3 = index">
+                <ng-container *ngFor="let month of datagrantt?.months[index3];let j=index;">
+
+                  <td>
+                    <div [ngSwitch]="projectmonth(year,month,i)">
+                      <p *ngSwitchCase=1 class="plan-cell"   tooltip="{{list.tooltip}}" (click)="edittooltip(i)"><img src="assets/images/Rectangle-yellow.png" class="img1 pointer">
+                      </p>
+                      <p *ngSwitchCase=2 class="plan-cell" tooltip="{{list.tooltip}}" (click)="edittooltip(i)"> <img src="assets/images/red-color.png" class="img1 pointer">
+                      </p>
+                      <p *ngSwitchCase=3 class="plan-cell" tooltip="{{list.tooltip}}" (click)="edittooltip(i)">  <img src="assets/images/blue-rect.png" class="img1 pointer">
+                      </p>
+                      <p *ngSwitchCase=4 class="plan-cell" tooltip="{{list.tooltip}}" (click)="edittooltip(i)"> <img src="assets/images/voilet-rect.png" class="img1 pointer">
+                      </p>
+                      <p *ngSwitchCase=5 class="plan-cell" tooltip="{{list.tooltip}}" (click)="edittooltip(i)"> <img src="assets/images/green-color.png" class="img1 pointer">
+                      </p>
+                      <p *ngSwitchCase=6 class="plan-cell">
+                      </p>
+                      <p class="filterable-cell" *ngSwitchCase=7> </p>
+                    </div>
+                  </td>
+
+                </ng-container>
+              </ng-container>
+            </tr>
+          </ng-container>
+        </tbody>
+      </table>
+    </div>
+    <div class=" table-responsive chart-table1" style="width: 450px;">
+
+      <table class="table  table-bordered " id="myTable1part1">
+        <thead class="text-danger">
+          <tr>
+            <th rowspan="4">
+              <h4>Current Status / Support Req if any</h4>
+            </th>
+          </tr>
+          <tr>
+            <th class="fix"></th>
+          </tr>
+          <tr>
+            <th class="fix"></th>
+          </tr>
+          <tr>
+            <th class="fix"></th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td>
+
+            </td>
+          </tr>
+          <ng-container *ngFor="let list of datagrantt?.data; let i = index">
+            <tr>
+              <td style="text-align:left;">
+                <a class="fix cursor" style="padding-left:100px;">{{list.name}}</a>
+                <img class="img-fluid upload-icon icon-pull-right" (click)="eyemodal()" src="assets/images/upload.png" *ngIf="list.img==1">
+                <img class="img-fluid icon-pull-right"(click)="uploadmodal()" src="assets/images/eye-open.png" *ngIf="list.img==0">
+              </td>
+              <!-- <td rowspan="2" class="fix"></td> -->
+
+            </tr>
+          </ng-container>
+
+          <!-- <tr>
+                <td class="fix" style="width: 90px;background: #e4e4e4;">
+                  <input class="form-control actualbg" #dpYMD="bsDatepicker" bsDatepicker [bsConfig]="{ dateInputFormat: 'DD-MM-YYYY' }" id='actualstart{{i}}'
+                    placeholder="Actual start date" value="{{list?.actualstart}}" (bsValueChange)="changedateActual(list.id,i,'astart')"
+                    *ngIf="list?.status == null">
+                  <input class="form-control actualbg" #dpYMD="bsDatepicker" bsDatepicker [bsConfig]="{ dateInputFormat: 'DD-MM-YYYY' }" id='actualstart'
+                    placeholder="Actual start date" value="{{list?.actualstart}}" disabled *ngIf="list?.status == 'pending' || list?.status == 'Completed' || list.status=='overdue' ">
+                </td>
+                <td class="fix" style="width: 90px;background:#b3c0ce;">
+                  <input class="form-control actualbg" #dpYMD="bsDatepicker" bsDatepicker [bsConfig]="{ dateInputFormat: 'DD-MM-YYYY' }" id='actualend{{i}}'
+                    placeholder="Actual end date" value="{{list?.actualend}}" (bsValueChange)="changedateActual(list.id,i,'aend')"
+                    *ngIf="list?.status=='pending' ">
+    
+                  <input class="form-control actualbg" #dpYMD="bsDatepicker" bsDatepicker [bsConfig]="{ dateInputFormat: 'DD-MM-YYYY' }" placeholder="Actual end date"
+                    value="{{list?.actualend}}" disabled *ngIf="list?.status=='Completed' || list?.status==null || list.status=='overdue'">
+                </td>
+              </tr> -->
+
+        </tbody>
+      </table>
+      <br>
+      <br>
+    </div>
+  </div>
+
+  <div class="col-md-12">
+    <ul class="legents py-4">
+      <li><img src="assets/images/Rectangle-yellow.png"> &nbsp;RFQ &nbsp;&nbsp;</li>
+      <li><img src="assets/images/red-color.png">&nbsp;PR/PO &nbsp;&nbsp;</li>
+      <li><img src="assets/images/blue-rect.png"> &nbsp;Material Receipt &nbsp;&nbsp;</li>
+      <li><img src="assets/images/voilet-rect.png">&nbsp;Start of I & C&nbsp;&nbsp;</li>
+      <li><img src="assets/images/green-color.png">&nbsp;Complrtion &nbsp;&nbsp;</li>
+    </ul>
+
+  </div>
+</div>
+
+
+
+<!-- modal -->
+<div id="ganttchat" class="modal fade">
+  <div class="modal-dialog" role="document">
+    <div id="modal-content" class="modal-content">
+      <div class="modal-body">
+        <div class="row" *ngIf="modalname == 'upload' || modalname == 'download' ">
+          <div class="col-md-12">
+            <label for="" class="editmodal">Upload Files</label>
+          </div>
+          <div class="col-md-12 text-center">
+            <div class="dragdropfile">
+              <label for="uploadFile" class="btn btn-sm uploadbtn cursor">
+                <img class="upload" src="assets/images/upload.png">&nbsp;&nbsp; Upload Files</label>
+              <br> {{filename}}
+              <input type="file" id="uploadFile" #uploadFile style="display: none" (change)="uploadfile($event)"
+                accept="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet,application/vnd.ms-excel">
+
+            </div>
+          </div>
+
+        </div>
+        <div class="row" *ngIf="modalname == 'upload' || modalname == 'download' ">
+          <div class="col-md-12 text-right py-3">
+            <button type="button" class="btn btn-sm dowloadbtn cursor" data-dismiss="modal">Cancel</button>&nbsp;&nbsp;
+            <button type="button" class="btn btn-sm dowloadbtn cursor"  data-dismiss="modal" (click)="conformeyemodal()">Submit</button>
+          </div>
+        </div>
+        <section class="modal-bg" *ngIf="modalname == 'download'">
+          <div class="row" style="border-top: 1px solid #979797;">
+            <div class="col-md-12 text-center">
+              <label for="" class="editmodal">Uploaded Files</label>
+            </div>
+
+            <div class="col-md-6">
+              <label for="" class="editmodal">1. File Name 1</label>
+            </div>
+            <div class="col-md-6">
+              <div class="dragdropfile">
+                <label for="uploadFile" class="btn btn-sm dowloadbtn cursor">
+                  <img src="assets/images/download.png">&nbsp;&nbsp; Download Files</label>
+                <br> {{filename}}
+                <input type="file" id="uploadFile" #uploadFile style="display: none" (change)="uploadfile($event)"
+                  accept="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet,application/vnd.ms-excel">
+
+              </div>
+
+            </div>
+
+            <div class="col-md-6">
+              <label for="" class="editmodal">2. File Name 2</label>
+            </div>
+            <div class="col-md-6">
+              <div class="dragdropfile">
+                <label for="uploadFile" class="btn btn-sm dowloadbtn cursor">
+                  <img src="assets/images/download.png">&nbsp;&nbsp; Download Files</label>
+                <br> {{filename}}
+                <input type="file" id="uploadFile" #uploadFile style="display: none" (change)="uploadfile($event)"
+                  accept="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet,application/vnd.ms-excel">
+
+              </div>
+
+            </div>
+
+            <div class="col-md-6">
+              <label for="" class="editmodal">3. File Name 3</label>
+            </div>
+            <div class="col-md-6">
+              <div class="dragdropfile">
+                <label for="uploadFile" class="btn btn-sm dowloadbtn cursor">
+                  <img src="assets/images/download.png">&nbsp;&nbsp; Download Files</label>
+                <br> {{filename}}
+                <input type="file" id="uploadFile" #uploadFile style="display: none" (change)="uploadfile($event)"
+                  accept="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet,application/vnd.ms-excel">
+              </div>
+            </div>
+          </div>
+        </section>
+
+
+      </div>
+    </div>
+  </div>
+</div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="edittooltip" role="dialog">
+        <div class="modal-dialog modal-sm">
+          <!-- Modal content-->
+          <div class="modal-content">
+            <div class="modal-header">
+              <h4 class="modal-title text-left">Edit</h4>
+            </div>
+            <div class="modal-body" style="padding: 0px 15px 13px 17px;">
+                <textarea class="form-control" id="edittool" rows="3" [(ngModel)]="tooltip" (input)="emptyerror()">
+
+                  </textarea>
+                  <small class="text-danger">{{tooltiperror}}</small>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary" (click)="confirmedittooltips()">Submit</button>
+
+            </div>
+          </div>
+          
+        </div>
+      </div>
+      
